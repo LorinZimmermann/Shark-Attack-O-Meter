@@ -21,37 +21,47 @@ h2 {
 }
 
 .australia {
-    position: relative; /* Set relative positioning for the container */
-    width: 800px; /* Set a fixed width */
-    height: 600px; /* Set a fixed height */
-    margin: 0 auto; /* Center the container horizontally */
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
 }
 
-/* Western Australia */
 .western_australia {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 27px;
+    left: -22px;
     width: 324px;
     height: 479px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
-.western_australia svg {
-    width: 100%;
-    height: 100%;
-}
+
 .western_australia svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
 }
 
-/* Northern Territory */
+.western_australia:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.western_australia svg path:hover {
+    fill: #e9da69;
+    transition: fill 0.3s ease;
+}
+
 .northern_territory {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: -80px;
+    left: 217px;
     width: 313px; 
     height: 430px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .northern_territory svg path {
@@ -60,13 +70,25 @@ h2 {
     stroke-width: 2px;
 }
 
-/* Queensland */
+.northern_territory:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.northern_territory svg path:hover {
+    fill: #f1956e;
+    transition: fill 0.3s ease;
+}
+
 .queensland {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: -68px;
+    left: 404px;
     width: 390px; 
     height: 485px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .queensland svg path {
@@ -75,13 +97,25 @@ h2 {
     stroke-width: 2px;
 }
 
-/* Victoria */
+.queensland:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.queensland svg path:hover {
+    fill: #89cc85;
+    transition: fill 0.3s ease;
+}
+
 .victoria {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 453px;
+    left: 488px;
     width: 169px;
     height: 134px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .victoria svg path {
@@ -90,13 +124,25 @@ h2 {
     stroke-width: 2px;
 }
 
-/* South Australia */
+.victoria:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.victoria svg path:hover {
+    fill: #c0a0c9;
+    transition: fill 0.3s ease;
+}
+
 .south_australia {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 241px;
+    left: 239px;
     width: 325px; 
     height: 353px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .south_australia svg path {
@@ -105,13 +151,25 @@ h2 {
     stroke-width: 2px;
 }
 
-/* Tasmania */
+.south_australia:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.south_australia svg path:hover {
+    fill: #66bcd5;
+    transition: fill 0.3s ease;
+}
+
 .tasmania {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 550px;
+    left: 500px;
     width: 182px; 
     height: 176px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .tasmania svg path {
@@ -120,16 +178,40 @@ h2 {
     stroke-width: 2px;
 }
 
+.tasmania:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.tasmania svg path:hover {
+    fill: #6694c5;
+    transition: fill 0.3s ease;
+}
+
 .new_south_wales {
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 346px;
+    left: 454px;
     width: 295px;
     height: 209px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .new_south_wales svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+}
+
+.new_south_wales:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.new_south_wales svg path:hover {
+    fill: #f9c466;
+    transition: fill 0.3s ease;
 }
