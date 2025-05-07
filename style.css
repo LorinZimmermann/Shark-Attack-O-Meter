@@ -1,0 +1,76 @@
+body {
+    font-family: "Jolly Lodger", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background: radial-gradient(circle at center, rgb(128, 183, 255) 0%, rgb(46, 123, 255) 100%);
+    margin: 0;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 75px;
+    text-align: center;
+    color: #000000;
+    margin-top: 75px;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #000000;
+}
+
+.australia {
+    position: relative; /* Set relative positioning for the container */
+    width: 800px; /* Set a fixed width */
+    height: 600px; /* Set a fixed height */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Western Australia */
+.wester_australia {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+/* Northern Territory */
+.northern_territory {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+/* Queensland */
+.queensland {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+/* Victoria */
+.victoria {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+/* South Australia */
+.south_australia {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+/* Tasmania */
+.tasmania {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+.new_south_wales {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
