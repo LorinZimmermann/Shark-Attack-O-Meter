@@ -3,15 +3,20 @@ body {
     font-weight: 400;
     font-style: normal;
     background: radial-gradient(circle at center, rgb(128, 183, 255) 0%, rgb(46, 123, 255) 100%);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     margin: 0;
-    height: 100vh;
+    height: 92vh;
 }
 
 h1 {
     font-size: 75px;
     text-align: center;
     color: #000000;
-    margin-top: 75px;
+    margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 h2 {
@@ -35,6 +40,20 @@ h2 {
     height: 479px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.western_australia_label {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 60px;
+    opacity: 0%;
+}
+
+.western_australia:hover .western_australia_label {
+    opacity: 100%; 
 }
 
 .western_australia svg path {
@@ -64,6 +83,20 @@ h2 {
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
+.northern_territory_label {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 45px;
+    opacity: 0%;
+}
+
+.northern_territory:hover .northern_territory_label {
+    opacity: 100%; 
+}
+
 .northern_territory svg path {
     fill: #D99830;
     stroke: #000000;
@@ -89,6 +122,20 @@ h2 {
     height: 485px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.queensland_label {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 50px;
+    opacity: 0%;
+}
+
+.queensland:hover .queensland_label {
+    opacity: 100%; 
 }
 
 .queensland svg path {
@@ -118,6 +165,20 @@ h2 {
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
+.victoria_label {
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 35px;
+    opacity: 0%;
+}
+
+.victoria:hover .victoria_label {
+    opacity: 100%; 
+}
+
 .victoria svg path {
     fill: #D99830;
     stroke: #000000;
@@ -143,6 +204,21 @@ h2 {
     height: 353px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease, fill 0.3s ease;
+    text-align: center;
+}
+
+.south_australia_label {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 40px;
+    opacity: 0%;
+}
+
+.south_australia:hover .south_australia_label {
+    opacity: 100%; 
 }
 
 .south_australia svg path {
@@ -172,6 +248,16 @@ h2 {
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
+.tasmania_label {
+    position: absolute;
+    top: 24%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 30px;
+    opacity: 0%;
+}
+
 .tasmania svg path {
     fill: #D99830;
     stroke: #000000;
@@ -182,6 +268,10 @@ h2 {
     transform: scale(1.05);
     z-index: 100;
     transition: transform 0.3s ease;
+}
+
+.tasmania:hover .tasmania_label {
+    opacity: 100%; 
 }
 
 .tasmania svg path:hover {
@@ -199,6 +289,20 @@ h2 {
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
+.new_south_wales_label {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 40px;
+    opacity: 0%;
+}
+
+.new_south_wales:hover .new_south_wales_label {
+    opacity: 100%; 
+}
+
 .new_south_wales svg path {
     fill: #D99830;
     stroke: #000000;
@@ -214,4 +318,21 @@ h2 {
 .new_south_wales svg path:hover {
     fill: #f9c466;
     transition: fill 0.3s ease;
+}
+
+@media screen {
+    @media (max-width: 800px) {
+        h1 {
+            font-size: 50px;
+            margin-top: 40px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+        .australia {
+            scale: .6;
+            transform-origin: center;
+            margin: auto;
+        }
+    }
 }
