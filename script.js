@@ -1,24 +1,85 @@
 const container = document.querySelector("#shark-attacks");
+const northernTerritoryElement = document.querySelector(".northern_territory");
+const newSouthWalesElement = document.querySelector(".new_south_wales");
+const queenslandElement = document.querySelector(".queensland");
+const westernAustraliaElement = document.querySelector(".western_australia");
+const victoriaElement = document.querySelector(".victoria");
+const tasmaniaElement = document.querySelector(".tasmania");
+const southAustraliaElement = document.querySelector(".south_australia");
 
-let API_URL = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records";
+let API_URL = " https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=20&refine=country%3A%22AUSTRALIA%22&refine=area%3A%22";
 
-const TERRITORIES = [
-    "Western Australia",
-    "South Australia",
-    "Victoria",
-    "Tasmania",
-    "New South Wales",
-    "Northern Territory",
-    "Queensland"
-];
 
-//API_URL += "&refine.area" --> mer mached eif jedes mal es neus API
+let currentTerritoryUrl = "";
+
+if (northernTerritoryElement) {
+    northernTerritoryElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}Northern%20Territory%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);
+    });
+}
+
+if (newSouthWalesElement) {
+    newSouthWalesElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}New%20South%20Wales%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);
+    });
+}
+
+if (queenslandElement) {
+    queenslandElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}Queensland%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);
+    });
+}
+
+if (westernAustraliaElement) {
+    westernAustraliaElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}Western%20Australia%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);
+    });
+}
+
+if (victoriaElement) {
+    victoriaElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}Victoria%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);
+    });
+}
+
+if (tasmaniaElement) {
+    tasmaniaElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}Tasmania%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);
+    });
+}
+
+if (southAustraliaElement) {
+    southAustraliaElement.addEventListener("click", () => {
+        const territoryUrl = `${API_URL}South%20Australia%22`;
+        currentTerritoryUrl = territoryUrl;
+        console.log("New API URL:", territoryUrl); // Log the new API URL
+        fetchData(territoryUrl).then(showLatestAttack);   
+    });
+}
 
 // count wie viel elements es ii dem array hett im jewilige territorium
 
-async function fetchData(url) {
+async function fetchData() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(currentTerritoryUrl);
         const data = await response.json();
         return data.results;
     } catch (e) {
@@ -35,17 +96,12 @@ function showLatestAttack(data) {
     const latest = sorted[0];
 
     if (latest) {
-        const card = document.createElement("article");
-        card.classList.add("card");
-        card.innerHTML = `
-            <p><strong>Date:</strong> ${latest.date}</p>
-            <p><strong>Location:</strong> ${latest.location || "Unknown"}</p>
-            <p><strong>Injury:</strong> ${latest.injury || "Not specified"}</p>
-        `;
-        container.appendChild(card);
+        console.log("Latest Shark Attack:");
+        console.log("Date:", latest.date);
+        console.log("Location:", latest.location || "Unknown");
+        console.log("Injury:", latest.injury || "Not specified");
     } else {
+        console.log("No data available for this territory.");
         container.innerText = "No data available.";
     }
 }
-
-fetchData(API_URL).then(showLatestAttack);
