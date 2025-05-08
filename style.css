@@ -9,6 +9,7 @@ body {
     align-items: center;
     margin: 0;
     height: 92vh;
+    align-items: center;
 }
 
 h1 {
@@ -30,6 +31,7 @@ h2 {
     width: 800px;
     height: 600px;
     margin: 0 auto;
+    scale: .9;
 }
 
 .western_australia {
@@ -50,27 +52,23 @@ h2 {
     pointer-events: none;
     font-size: 60px;
     opacity: 0%;
-}
-
-.western_australia:hover .western_australia_label {
-    opacity: 100%; 
+    transition: opacity 0.3s ease;
 }
 
 .western_australia svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-.western_australia:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
+.button.hover .western_australia_label {
+    opacity: 100%; 
 }
 
 .western_australia svg path:hover {
     fill: #e9da69;
-    transition: fill 0.3s ease;
 }
 
 .northern_territory {
@@ -91,27 +89,23 @@ h2 {
     pointer-events: none;
     font-size: 45px;
     opacity: 0%;
-}
-
-.northern_territory:hover .northern_territory_label {
-    opacity: 100%; 
+    transition: opacity 0.3s ease;
 }
 
 .northern_territory svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-.northern_territory:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
+.button.hover .northern_territory_label {
+    opacity: 100%; 
 }
 
 .northern_territory svg path:hover {
     fill: #f1956e;
-    transition: fill 0.3s ease;
 }
 
 .queensland {
@@ -132,27 +126,23 @@ h2 {
     pointer-events: none;
     font-size: 50px;
     opacity: 0%;
-}
-
-.queensland:hover .queensland_label {
-    opacity: 100%; 
+    transition: opacity 0.3s ease;
 }
 
 .queensland svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-.queensland:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
+.button.hover .queensland_label {
+    opacity: 100%; 
 }
 
 .queensland svg path:hover {
     fill: #89cc85;
-    transition: fill 0.3s ease;
 }
 
 .victoria {
@@ -173,27 +163,23 @@ h2 {
     pointer-events: none;
     font-size: 35px;
     opacity: 0%;
-}
-
-.victoria:hover .victoria_label {
-    opacity: 100%; 
+    transition: opacity 0.3s ease;
 }
 
 .victoria svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-.victoria:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
+.button.hover .victoria_label {
+    opacity: 100%; 
 }
 
 .victoria svg path:hover {
     fill: #c0a0c9;
-    transition: fill 0.3s ease;
 }
 
 .south_australia {
@@ -215,27 +201,23 @@ h2 {
     pointer-events: none;
     font-size: 40px;
     opacity: 0%;
-}
-
-.south_australia:hover .south_australia_label {
-    opacity: 100%; 
+    transition: opacity 0.3s ease;
 }
 
 .south_australia svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-.south_australia:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
+.button.hover .south_australia_label {
+    opacity: 100%; 
 }
 
 .south_australia svg path:hover {
     fill: #66bcd5;
-    transition: fill 0.3s ease;
 }
 
 .tasmania {
@@ -256,27 +238,26 @@ h2 {
     pointer-events: none;
     font-size: 30px;
     opacity: 0%;
+    transition: opacity 0.3s ease;
 }
 
 .tasmania svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+.button.hover {
+    z-index: 999;
 }
 
-.tasmania:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
-}
-
-.tasmania:hover .tasmania_label {
+.button.hover .tasmania_label {
     opacity: 100%; 
 }
 
 .tasmania svg path:hover {
     fill: #6694c5;
-    transition: fill 0.3s ease;
 }
 
 .new_south_wales {
@@ -297,42 +278,192 @@ h2 {
     pointer-events: none;
     font-size: 40px;
     opacity: 0%;
-}
-
-.new_south_wales:hover .new_south_wales_label {
-    opacity: 100%; 
+    transition: opacity 0.3s ease;
 }
 
 .new_south_wales svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
-.new_south_wales:hover {
-    transform: scale(1.05);
-    z-index: 100;
-    transition: transform 0.3s ease;
+.button.hover .new_south_wales_label {
+    opacity: 100%; 
 }
 
 .new_south_wales svg path:hover {
     fill: #f9c466;
-    transition: fill 0.3s ease;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay_content {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    scale: .9;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.surfboard {
+    display: block;
+    position: relative;
+    scale: 1;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+p {
+    font-size: 30px;
+}
+
+.button svg path:hover {
+    transform: scale(1.05);
+}
+
+.latest_attack {
+    font-size: 60px;
+}
+
+.khai_1 {
+    width: 90px;    
+    position: absolute;
+    animation: khai_1 6s linear infinite;
+}
+
+@keyframes khai_1 {
+    0% {
+        transform: translate(600px, 300px) rotate(0deg);
+    }
+    25% {
+        transform: translate(475px, 200px) rotate(90deg);
+    }
+    50% {
+        transform: translate(350px, -200px) rotate(180deg);
+    }
+    75% {
+        transform: translate(475px, 0px) rotate(270deg);
+    }
+    100% {
+        transform: translate(600px, 300px) rotate(0deg);
+    }
+}
+
+.khai_2 {
+    width: 90px;    
+    position: absolute;
+    transform: scaleX(-1);
+    animation: khai_2 7s linear infinite;
+}
+
+@keyframes khai_2 {
+    0% {
+        transform: translate(-600px, -300px) rotate(0deg);
+    }
+    25% {
+        transform: translate(-500px, -200px) rotate(-90deg);
+    }
+    50% {
+        transform: translate(-400px, 200px) rotate(-180deg);
+    }
+    75% {
+        transform: translate(-500px, 0px) rotate(-270deg);
+    }
+    100% {
+        transform: translate(-600px, -300px) rotate(0deg);
+    }
 }
 
 @media screen {
     @media (max-width: 800px) {
         h1 {
             font-size: 50px;
-            margin-top: 40px;
+            padding-bottom: 650px;
         }
+
         h2 {
             font-size: 40px;
         }
         .australia {
-            scale: .6;
+            scale: .5;
             transform-origin: center;
             margin: auto;
+            position: fixed;
+        }
+        .overlay_content {
+            scale: .6;  
+        }
+        .text {
+            max-width: 95%;
+        }
+        .khai_1 {
+            width: 60px;    
+            position: absolute;
+            animation: khai_1 6s linear infinite;
+        }
+        
+        @keyframes khai_1 {
+            0% {
+                transform: translate(0, 200px) rotate(0deg);
+            }
+            25% {
+                transform: translate(-150px, 250px) rotate(-90deg);
+            }
+            50% {
+                transform: translate(0, 300px) rotate(-180deg);
+            }
+            75% {
+                transform: translate(150px, 250px) rotate(-270deg);
+            }
+            100% {
+                transform: translate(0, 200px) rotate(0deg);
+            }
+        }
+        
+        .khai_2 {
+            width: 60px;    
+            position: absolute;
+            transform: scaleX(-1);
+            animation: khai_2 7s linear infinite;
+        }
+        
+        @keyframes khai_2 {
+            0% {
+                transform: translate(0, -200px) rotate(0deg);
+            }
+            25% {
+                transform: translate(-150px, -250px) rotate(90deg);
+            }
+            50% {
+                transform: translate(0, -300px) rotate(180deg);
+            }
+            75% {
+                transform: translate(150px, -250px) rotate(270deg);
+            }
+            100% {
+                transform: translate(0, -200px) rotate(0deg);
+            }
         }
     }
 }
