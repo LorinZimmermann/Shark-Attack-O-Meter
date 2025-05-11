@@ -37,7 +37,7 @@ h2 {
 .western_australia {
     position: absolute;
     top: 27px;
-    left: -22px;
+    left: 17px;
     width: 324px;
     height: 479px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -55,14 +55,6 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.western_australia svg path {
-    fill: #D99830;
-    stroke: #000000;
-    stroke-width: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
 .button.hover .western_australia_label {
     opacity: 100%; 
 }
@@ -74,7 +66,7 @@ h2 {
 .northern_territory {
     position: absolute;
     top: -80px;
-    left: 217px;
+    left: 257px;
     width: 313px; 
     height: 430px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -92,14 +84,6 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.northern_territory svg path {
-    fill: #D99830;
-    stroke: #000000;
-    stroke-width: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
 .button.hover .northern_territory_label {
     opacity: 100%; 
 }
@@ -111,7 +95,7 @@ h2 {
 .queensland {
     position: absolute;
     top: -68px;
-    left: 404px;
+    left: 444px;
     width: 390px; 
     height: 485px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -129,14 +113,6 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.queensland svg path {
-    fill: #D99830;
-    stroke: #000000;
-    stroke-width: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
 .button.hover .queensland_label {
     opacity: 100%; 
 }
@@ -148,7 +124,7 @@ h2 {
 .victoria {
     position: absolute;
     top: 453px;
-    left: 488px;
+    left: 528px;
     width: 169px;
     height: 134px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -166,14 +142,6 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.victoria svg path {
-    fill: #D99830;
-    stroke: #000000;
-    stroke-width: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
 .button.hover .victoria_label {
     opacity: 100%; 
 }
@@ -185,7 +153,7 @@ h2 {
 .south_australia {
     position: absolute;
     top: 241px;
-    left: 239px;
+    left: 279px;
     width: 325px; 
     height: 353px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -204,14 +172,6 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.south_australia svg path {
-    fill: #D99830;
-    stroke: #000000;
-    stroke-width: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
 .button.hover .south_australia_label {
     opacity: 100%; 
 }
@@ -223,7 +183,7 @@ h2 {
 .tasmania {
     position: absolute;
     top: 550px;
-    left: 500px;
+    left: 540px;
     width: 182px; 
     height: 176px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -241,13 +201,6 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.tasmania svg path {
-    fill: #D99830;
-    stroke: #000000;
-    stroke-width: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
 .button.hover {
     z-index: 999;
 }
@@ -263,7 +216,7 @@ h2 {
 .new_south_wales {
     position: absolute;
     top: 346px;
-    left: 454px;
+    left: 494px;
     width: 295px;
     height: 209px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
@@ -281,7 +234,7 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.new_south_wales svg path {
+svg path {
     fill: #D99830;
     stroke: #000000;
     stroke-width: 2px;
@@ -349,7 +302,7 @@ p {
 .khai_1 {
     width: 90px;    
     position: absolute;
-    animation: khai_1 6s linear infinite;
+    animation: khai_1 7s linear infinite;
 }
 
 @keyframes khai_1 {
@@ -363,10 +316,10 @@ p {
         transform: translate(350px, -200px) rotate(180deg);
     }
     75% {
-        transform: translate(475px, 0px) rotate(270deg);
+        transform: translate(700px, 0px) rotate(270deg);
     }
     100% {
-        transform: translate(600px, 300px) rotate(0deg);
+        transform: translate(600px, 300px) rotate(360deg);
     }
 }
 
@@ -374,29 +327,29 @@ p {
     width: 90px;    
     position: absolute;
     transform: scaleX(-1);
-    animation: khai_2 7s linear infinite;
+    animation: khai_2 8s linear infinite;
 }
 
 @keyframes khai_2 {
     0% {
-        transform: translate(-600px, -300px) rotate(0deg);
+        transform: translate(-600px, -300px) rotate(-50deg);
     }
     25% {
-        transform: translate(-500px, -200px) rotate(-90deg);
+        transform: translate(-500px, 0px) rotate(-90deg);
     }
     50% {
-        transform: translate(-400px, 200px) rotate(-180deg);
+        transform: translate(-600px, 400px) rotate(-75deg);
     }
     75% {
-        transform: translate(-500px, 0px) rotate(-270deg);
+        transform: translate(-700px, 0px) rotate(90deg);
     }
     100% {
-        transform: translate(-600px, -300px) rotate(0deg);
+        transform: translate(-600px, -300px) rotate(-50deg);
     }
 }
 
 @media screen {
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
         h1 {
             font-size: 50px;
             padding-bottom: 650px;
@@ -405,18 +358,22 @@ p {
         h2 {
             font-size: 40px;
         }
+
         .australia {
-            scale: .5;
+            scale: .6;
             transform-origin: center;
             margin: auto;
             position: fixed;
         }
+
         .overlay_content {
             scale: .6;  
         }
+
         .text {
             max-width: 95%;
         }
+
         .khai_1 {
             width: 60px;    
             position: absolute;
@@ -425,7 +382,7 @@ p {
         
         @keyframes khai_1 {
             0% {
-                transform: translate(0, 200px) rotate(0deg);
+                transform: translate(-60px, 175px) rotate(0deg);
             }
             25% {
                 transform: translate(-150px, 250px) rotate(-90deg);
@@ -434,10 +391,10 @@ p {
                 transform: translate(0, 300px) rotate(-180deg);
             }
             75% {
-                transform: translate(150px, 250px) rotate(-270deg);
+                transform: translate(150px, 260px) rotate(-270deg);
             }
             100% {
-                transform: translate(0, 200px) rotate(0deg);
+                transform: translate(-60px, 175px) rotate(-360deg);
             }
         }
         
@@ -450,10 +407,10 @@ p {
         
         @keyframes khai_2 {
             0% {
-                transform: translate(0, -200px) rotate(0deg);
+                transform: translate(0, -220px) rotate(0deg);
             }
             25% {
-                transform: translate(-150px, -250px) rotate(90deg);
+                transform: translate(-200px, -250px) rotate(90deg);
             }
             50% {
                 transform: translate(0, -300px) rotate(180deg);
@@ -462,7 +419,7 @@ p {
                 transform: translate(150px, -250px) rotate(270deg);
             }
             100% {
-                transform: translate(0, -200px) rotate(0deg);
+                transform: translate(0, -220px) rotate(360deg);
             }
         }
     }
