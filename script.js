@@ -16,12 +16,17 @@ const dateElement = document.querySelector(".date");
 const locationElement = document.querySelector(".location");
 const injuryElement = document.querySelector(".injury");
 
-let API_URL = " https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=20&refine=country%3A%22AUSTRALIA%22&refine=area%3A%22";
+const total = document.querySelector(".total");
+const territoryCount = document.querySelector(".territory_count");
+
+let API_URL = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=20&refine=country%3A%22AUSTRALIA%22&refine=area%3A%22";
 
 let currentTerritoryUrl = "";
 
 if (northernTerritoryElement) {
     northernTerritoryElement.addEventListener("click", () => {
+        const territoryName = "Northern Territory";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}Northern%20Territory%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -31,6 +36,8 @@ if (northernTerritoryElement) {
 
 if (newSouthWalesElement) {
     newSouthWalesElement.addEventListener("click", () => {
+        const territoryName = "New South Wales";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}New%20South%20Wales%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -40,6 +47,8 @@ if (newSouthWalesElement) {
 
 if (queenslandElement) {
     queenslandElement.addEventListener("click", () => {
+        const territoryName = "Queensland";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}Queensland%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -49,6 +58,8 @@ if (queenslandElement) {
 
 if (westernAustraliaElement) {
     westernAustraliaElement.addEventListener("click", () => {
+        const territoryName = "Western Australia";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}Western%20Australia%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -58,6 +69,8 @@ if (westernAustraliaElement) {
 
 if (victoriaElement) {
     victoriaElement.addEventListener("click", () => {
+        const territoryName = "Victoria";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}Victoria%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -67,6 +80,8 @@ if (victoriaElement) {
 
 if (tasmaniaElement) {
     tasmaniaElement.addEventListener("click", () => {
+        const territoryName = "Tasmania";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}Tasmania%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -76,6 +91,8 @@ if (tasmaniaElement) {
 
 if (southAustraliaElement) {
     southAustraliaElement.addEventListener("click", () => {
+        const territoryName = "South Australia";
+        territoryCount.textContent = territoryName;
         const territoryUrl = `${API_URL}South%20Australia%22`;
         currentTerritoryUrl = territoryUrl;
         console.log("New API URL:", territoryUrl);
@@ -87,9 +104,17 @@ async function fetchData() {
     try {
         const response = await fetch(currentTerritoryUrl);
         const data = await response.json();
+
+        if (data.total_count !== undefined) {
+            total.textContent = data.total_count;
+        } else {
+            total.textContent = "Unknown";
+        }
+
         return data.results;
     } catch (e) {
         console.error(e);
+        total.textContent = "Unknown";
         return [];
     }
 }
@@ -117,7 +142,7 @@ function showLatestAttack(data) {
 
 button.forEach(button => {
     button.addEventListener('click', () => {
-        overlay.style.display = 'block';
+        overlay.style.display = 'grid';
     });
     button.querySelector("path").addEventListener('mouseover', () => {
         button.classList.add('hover');

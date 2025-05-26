@@ -1,6 +1,6 @@
 # Shark-Attack-O-Meter
 
-Kurzbeschreibung des Projekts
+## Kurzbeschreibung des Projekts
 Unser Projekt ist eine interaktive Karte von Australien, die für jedes Territorium (ausser dem Australian Capital Territory) die letzte Haiattacke anzeigt. Zusätzlich wird die aktuelle Gesamtzahl der Haiattacken in der jeweils ausgewählten Region bis zum heutigen Datum dargestellt. Die Daten aktualisieren sich natürlich immer wieder laut dem API. Die Daten werden in einem Overlay angezeigt, den man auf und zu machen kann. Es schwimmen ebenfalls als Dekoration Haie im Bildschirm herum.
 
 Learnings
