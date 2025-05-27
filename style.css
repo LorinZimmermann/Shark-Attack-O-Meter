@@ -432,6 +432,7 @@ p {
         .count {
             scale: 0.6;
             transform-origin: center center;
+            margin-top: 10vh;
         }
 
         .khai_1 {
