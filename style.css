@@ -16,8 +16,7 @@ h1 {
     font-size: 75px;
     text-align: center;
     color: #000000;
-    margin-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 10vh;
 }
 
 h2 {
@@ -289,7 +288,12 @@ svg path {
     white-space: normal;
     margin: auto;
     padding-top: 100px;
-    max-width: 85%;
+    max-width: 70%;
+    line-height: 35px;
+}
+
+.subtitle {
+    margin-bottom: -2vh;
 }
 
 .count {
@@ -333,6 +337,8 @@ p {
 
 .latest_attack {
     font-size: 60px;
+    line-height: 50px;
+    padding-top: 70px;
 }
 
 .khai_1 {
@@ -388,7 +394,7 @@ p {
     @media (max-width: 768px) {
         h1 {
             font-size: 50px;
-            padding-bottom: 650px;
+            margin-bottom: 70vh;
         }
 
         h2 {
@@ -396,14 +402,14 @@ p {
         }
 
         .australia {
-            scale: .5;
+            scale: .45;
             transform-origin: center;
             margin: auto;
             position: fixed;
         }
 
         .text {
-            max-width: 95%;
+            max-width: 65%;
         }
 
         .overlay {
@@ -416,6 +422,11 @@ p {
             justify-content: center;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .total {
+            font-size: 300px;
+            margin-bottom: -70px;
         }
 
         .count {
