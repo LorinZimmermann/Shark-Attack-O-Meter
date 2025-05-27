@@ -252,7 +252,7 @@ svg path {
 }
 
 .overlay {
-    display: grid;
+    display: none;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     width: 100vw;
@@ -287,8 +287,9 @@ svg path {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-    margin: 0 auto;
-    max-width: 90%;
+    margin: auto;
+    padding-top: 100px;
+    max-width: 85%;
 }
 
 .count {

@@ -13,3 +13,6 @@ Schwierigkeiten
 
 benutzte Ressourcen und Prompts
 --> ChatGPT, Github Copilot
+
+append a different ending to the api according to which territory is being clicked
+ersetze den inhalt von .total mit "total_count" aus der api
