@@ -345,6 +345,7 @@ p {
     width: 90px;    
     position: absolute;
     animation: khai_1 7s linear infinite;
+    cursor: pointer;
 }
 
 @keyframes khai_1 {
@@ -370,6 +371,7 @@ p {
     position: absolute;
     transform: scaleX(-1);
     animation: khai_2 8s linear infinite;
+    cursor: pointer;
 }
 
 @keyframes khai_2 {

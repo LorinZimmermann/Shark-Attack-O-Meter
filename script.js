@@ -19,6 +19,10 @@ const injuryElement = document.querySelector(".injury");
 const total = document.querySelector(".total");
 const territoryCount = document.querySelector(".territory_count");
 
+const audio = document.getElementById("audio");
+const playButton1 = document.querySelector(".khai_1");
+const playButton2 = document.querySelector(".khai_2");
+
 let API_URL = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=20&refine=country%3A%22AUSTRALIA%22&refine=area%3A%22";
 
 let currentTerritoryUrl = "";
@@ -158,4 +162,26 @@ overlay.addEventListener('click', (e) => {
     }
   });
 
-  
+playButton1.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playButton1.classList.add('playing');
+        playButton2.classList.add('playing'); 
+    } else {
+        audio.pause();
+        playButton1.classList.remove('playing');
+        playButton2.classList.remove('playing'); 
+    }
+});
+
+playButton2.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playButton1.classList.add('playing'); 
+        playButton2.classList.add('playing');
+    } else {
+        audio.pause();
+        playButton1.classList.remove('playing'); 
+        playButton2.classList.remove('playing');
+    }
+});
